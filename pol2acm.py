@@ -77,8 +77,8 @@ def main(zipfile, output):
             num_cases += 1
             src_in_file = os.path.join("tests", filename[:-2])
             src_out_file = os.path.join("tests", filename)
-            in_file = os.path.join(output, f"{filename[:-2]}.in")
-            out_file = os.path.join(output, f"{filename[:-2]}.out")
+            in_file = os.path.join(output, f"{num_cases}.in")
+            out_file = os.path.join(output, f"{num_cases}.out")
             print(f"Copying '{src_in_file}' to '{in_file}' and '{src_out_file}' to '{out_file}'...")
             shutil.copy(src_in_file, in_file)
             shutil.copy(src_out_file, out_file)
