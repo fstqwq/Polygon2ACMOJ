@@ -35,8 +35,8 @@ def parse_problem_xml(xml_file):
     time_limit = int(root.find(".//time-limit").text)
     memory_limit = int(root.find(".//memory-limit").text)
     
-    # 检查是否有 tag 值为 "interactive"
-    interactive_tag = root.find(".//tag[@value='interactive']")
+    # 检查是否有 assets/interactor
+    interactive_tag = root.find(".//assets/interactor")
     spj_type = {
             "Run": "interactive",
             "Check": "skip"
